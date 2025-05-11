@@ -14,7 +14,6 @@ function createWindow() {
   if (isDev) {
     win.loadURL("http://localhost:5173");
   } else {
-    // En producción, index.html está en la raíz del app.asar
     win.loadURL(`file://${path.join(__dirname, "../index.html")}`);
   }
 }
