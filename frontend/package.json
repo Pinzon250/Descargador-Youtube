@@ -62,7 +62,14 @@
     ],
     "win": {
       "target": "nsis",
-      "icon": "public/icon.png"
+      "icon": "public/descarga.ico"
+    },
+    "nsis": {
+      "oneClick": false,
+      "perMachine": true,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true,
+      "shortcutName": "Descargador de Youtube"
     },
     "extraResources": [
       {

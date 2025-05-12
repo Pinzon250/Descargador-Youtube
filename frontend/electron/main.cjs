@@ -9,9 +9,15 @@ function createWindow() {
   const win = new BrowserWindow({
     width: 1200,
     height: 900,
-    icon: path.join(__dirname, "../public/descarga.png"),
+    icon: path.join(__dirname, "../public/descarga.ico"),
+    autoHideMenuBar: true,
+    transparent: false,
+    backgroundColor: "#101828",
+    titleBarStyle: 'hiddenInset',
     webPreferences: {
       contextIsolation: true,
+      nodeIntegration: false,
+      webSecurity: false,
     },
   });
 
@@ -19,6 +25,7 @@ function createWindow() {
     win.loadURL("http://localhost:5173");
   } else {
     win.loadURL(`file://${path.join(__dirname, "../dist/index.html")}`);
+    win.setMenuBarVisibility(false);
   }
 }
 
@@ -56,3 +63,4 @@ app.on("window-all-closed", () => {
 app.on("activate", () => {
   if (BrowserWindow.getAllWindows().length === 0) createWindow();
 });
+
