@@ -44,7 +44,7 @@ function App() {
 
   return (
     <div className="relative isolate min-h-screen bg-gray-900 flex flex-col items-center justify-center">
-      <div className="backdrop-blur-sm bg-[#1E293B]/60 box-shadow-mb rounded-2xl p-6 w-full max-w-md">
+      <div className="backdrop-blur-sm bg-[#1E293B]/60 shadow-2xl/50 rounded-2xl p-6 w-full max-w-md">
         <h1 className="text-4xl font-semibold tracking-tight text-white text-center mb-4">Descargador de YouTube</h1>
 
         <label className="mb-2 text-lg text-gray-300 block">URL del video:</label>

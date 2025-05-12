@@ -3,6 +3,7 @@ from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import FileResponse
 import yt_dlp
 import os
+import uvicorn
 import uuid
 
 app = FastAPI()
@@ -56,3 +57,6 @@ def descargar(url: str = Query(...), formato: str = Query("video")):
         return {"error": "Archivo no encontrado"}
     except Exception as e:
         return {"error": str(e)}
+    
+if __name__ == "__main__":
+    uvicorn.run("app.main:app", host="127.0.0.1", port=8000, reload=True)
